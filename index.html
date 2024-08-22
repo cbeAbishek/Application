@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Apply Form</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="pngegg.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="headtitle">
+        <a href="https://check.so" class="btn-shine" target="_blank"> &nbsp;&nbsp;&nbsp;Welcome to Application </a>
+    </div>
+    <section class="contact-section">
+        <h2 class="contact-title">Job Application Form</h2>
+        <form id="myForm" onsubmit="return openConfirmationPopup(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="Others" name="gender" value="Others">
+                <label for="Others">Others</label>
+            </div>
+
+            <label for="description">Describe Yourself:</label>
+            <textarea id="description" name="description" placeholder="Tell us about yourself" required></textarea>
+
+            <label for="social-links">Professional Social Media Links:</label>
+            <input type="text" id="social-links" name="social-links" placeholder="Paste your social media links"
+                required>
+
+            <div class="apply">
+                <button type="submit">Apply</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-item">
+            <p>&copy; Job_search.com</p>
+        </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                Confirm Your Details
+            </div>
+            <div class="modal-body">
+                <p><strong>Name:</strong> <span id="confirmName"></span></p>
+                <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="confirmPhone"></span></p>
+                <p><strong>Age:</strong> <span id="confirmAge"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="submitForm()">Confirm</button>
+                <button type="button" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateURL(url) {
+            var urlRegex = /^(https?:\/\/)?([a-zA-Z0-9.-]+(\.[a-zA-Z]{2,})+)(:[0-9]{1,5})?(\/.*)?$/;
+            return urlRegex.test(url.trim());
+        }
+
+        function openConfirmationPopup(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+
+            var nameInput = document.getElementById("name").value.trim();
+            var emailInput = document.getElementById("email").value.trim();
+            var phoneInput = document.getElementById("phone").value.trim();
+            var dobInput = new Date(document.getElementById("dob").value);
+            var age = calculateAge(dobInput);
+            var socialLinksInput = document.getElementById("social-links").value.trim();
+
+            // Validate the inputs
+            if (nameInput === "" || emailInput === "" || phoneInput === "" || isNaN(age) || !validateURL(socialLinksInput)) {
+                alert("Please fill in all the required fields and provide a valid URL.");
+                return false;
+            }
+
+            // Populate the modal with the user's inputs
+            document.getElementById("confirmName").textContent = nameInput;
+            document.getElementById("confirmEmail").textContent = emailInput;
+            document.getElementById("confirmPhone").textContent = phoneInput;
+            document.getElementById("confirmAge").textContent = age;
+
+            // Display the modal
+            var modal = document.getElementById("confirmationModal");
+            modal.style.display = "block";
+
+            return false; // Prevent the form from submitting for now
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("confirmationModal");
+            modal.style.display = "none";
+        }
+
+        function submitForm() {
+            closeModal();
+            document.getElementById("myForm").submit(); // Submit the form after confirmation
+        }
+
+        function calculateAge(dob) {
+            var today = new Date();
+            var age = today.getFullYear() - dob.getFullYear();
+            var monthDiff = today.getMonth() - dob.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function (event) {
+            var modal = document.getElementById("confirmationModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
