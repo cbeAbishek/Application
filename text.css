@@ -20,6 +20,17 @@
   text-decoration: none;
   white-space: nowrap;
 }
+
+@media screen and (max-width: 800px) {
+  .btn-shine {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
 @-moz-keyframes shine {
   0% {
     background-position: 0;
