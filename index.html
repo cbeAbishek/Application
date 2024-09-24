@@ -1,157 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Apply Form</title>
-    <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="text.css">
-    <link rel="stylesheet" href="popup.css">
-    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>PPG Institute of Technology Chatbot</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <header>
-        <nav>
+    <!-- Header section with h1 and logos side by side -->
+    <div class="header-container">
+        <div class="header">
             <div class="logo">
-                <img src="logo.png" alt="Logo">
+                <img src="4.jpeg" alt="Logo Image" style="border-radius: 5px;">
             </div>
-            <ul>
-                <li><a href="Abouts.html">About us</a></li>
-                <li><a href="#">Home</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div id="headtitle">
-        <a href="https://check.so" class="btn-shine" target="_blank"> &nbsp;&nbsp;&nbsp;Welcome to Application </a>
-    </div>
-    <section class="contact-section">
-        <h2 class="contact-title">Job Application Form</h2>
-        <form id="myForm" onsubmit="return openConfirmationPopup(event)">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" required>
-
-            <label for="gender">Gender:</label>
-            <div class="radio-group">
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="Others" name="gender" value="Others">
-                <label for="Others">Others</label>
+            <h1 style="color: rgb(161, 219, 253); font-size: 2.5rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PPG INSTITUTE OF TECHNOLOGY</h1>
+            <div class="logo-2">
+                <img src="10.jpg" alt="Logo Image" style="border-radius: 5px;">
             </div>
-
-            <label for="description">Describe Yourself:</label>
-            <textarea id="description" name="description" placeholder="Tell us about yourself" required></textarea>
-
-            <label for="social-links">Professional Social Media Links:</label>
-            <input type="text" id="social-links" name="social-links" placeholder="Paste your social media links"
-                required>
-
-            <div class="apply">
-                <button type="submit">Apply</button>
-            </div>
-        </form>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-item">
-            <p>&copy; Job_search.com</p>
         </div>
-    </footer>
+        <p style="color: rgb(154, 187, 241); border-radius: 10px;border-width: 0.8px; border-color: #97d5fc; ;justify-content: center; font-family: 'Times New Roman', Times, serif;">(Approved by AICTE, New Delhi, Affiliated to Anna University, Accredited by NAAC,
+            Recognized by UGC under section 2(f), An ISO 9001:2015 Certified Institution)
+        </p>
 
-    <!-- The Modal -->
-    <div id="confirmationModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-header">
-                Confirm Your Details
+        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h2>
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.9rem; color: rgb(152, 189, 254); font-weight:2px; letter-spacing: 2px;">PRESENTS</h3>
+    
+&nbsp;
+
+<div class="grid-container">
+    <!-- First Item: Loader -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <svg height="0" width="0" viewBox="0 0 64 64" class="absolute">
+                <defs>
+                    <linearGradient gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0" id="b">
+                        <stop stop-color="#973BED"></stop>
+                        <stop stop-color="#007CFF" offset="1"></stop>
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <!-- T -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.0" stroke="url(#b)"
+                    d="M 12 4 H 52 V 8 H 36 V 60 H 28 V 8 H 12 Z" class="dash" pathLength="360"></path>
+            </svg>
+
+            <!-- E -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.7" stroke="url(#b)"
+                    d="M 52 4 H 12 V 60 H 52 V 52 H 20 V 36 H 48 V 28 H 20 V 12 H 52 Z" class="dash"
+                    pathLength="360"></path>
+            </svg>
+
+            <!-- C -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.0" stroke="url(#b)"
+                    d="M 52 12 V 4 H 12 V 60 H 52 V 52 H 20 V 12 Z" class="dash" pathLength="360"></path>
+            </svg>
+
+            <!-- H -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="9.5" stroke="url(#b)"
+                    d="M 12 4 V 60 H 20 V 36 H 44 V 60 H 52 V 4 H 44 V 28 H 20 V 4 Z" class="dash"
+                    pathLength="360"></path>
+            </svg>
+
+            <!-- N -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64"
+                class="inline-block">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="12.5" stroke="url(#b)"
+                    d="M 12 4 V 60 H 20 L 44 20 V 60 H 52 V 4 H 44 L 20 44 V 4 Z" class="dash" pathLength="360">
+                </path>
+            </svg>
+
+            <!-- O -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="75" width="75" class="inline-block">
+                <!-- Outer circle -->
+                <circle cx="32" cy="32" r="24" stroke="url(#b)" stroke-width="10.5" fill="none" class="dash"
+                    pathLength="150"></circle>
+                <!-- Inner circle -->
+                <circle cx="32" cy="32" r="12" fill="none" />
+            </svg>
+        </div>
+        <div class="kreaticon-text">
+            <p style="font-size:larger; font-weight: bold; line-height: 1.5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #97d5fc;">KreatiCon</p>
+        </div>
+    </div>
+
+    <!-- Vertical Line Separator -->
+    <div class="vertical-line"></div>
+
+    <!-- Second Item: Placeholder Content -->
+    <div class="content-des">
+        <h2 style="color: rgb(174, 212, 245); font-size: 1.9rem;">2 Days Ideathon!</h2>
+        <p style="color: rgb(162, 204, 241); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Put on your thinking caps as you get ready for a creativity <br> problem-solving workout. This is a two-day event where people
+            with <br> bright ideas will come and present their ideas in five technology <br> segments such as AI, ML, Automation, and many others. 
+            Teams must <br>come up with their ideas with each domain having one finalist to compete<br> in the last round.
+            In the last round of the competition, 5 teams will be shortlisted<br> on the spot, and they will have only one hour to
+            come up with a different solution. <br> Don’t forget the attraction of attractive awards for the 1st, 2nd, and 3rd
+            places! <br> Do not let a day go by more so a week, a month, and a year whereby you are <br>not translating your ideas into
+            implementation.</p>
+    </div>
+</div>
+<br> &nbsp;
+<br> &nbsp;
+          
+        <section class="skills">
+            <div class="container-menu">
+              <div class="skills-flex-container">
+                <div class="box">
+                  <div class="image">
+                    <a href="broucher.html" style="text-decoration: none;">
+                    <img src="flyer.png" alt="xd">
+                  </div>
+                  <div class="title">Brochure</div></a>
+                </div>
+                <div class="box">
+                  <div class="image">
+           
+                    <img src="agenda.png" alt="figma">
+                  </div>
+                  <div class="title">Agenda</div>
+                </div>
+                <div class="box">
+                  <div class="image">
+                    <a href="timeline.html" style="text-decoration: none;">
+                    <img src="timeline.png" alt="html">
+                  </div>
+                  <div class="title">Timeline</div></a>
+                </div>
+                
+                <div class="box">
+                  <div class="image">
+                   
+                    <img src="1st-prize.png" alt="javascript">
+                  </div>
+                  <div class="title">Prizes</div>
+                </div>
+                <div class="box">
+                  <div class="image">
+                    <img src="compliant.png" alt="photoshop">
+                  </div>
+                  <div class="title">Rules</div>
+                </div>
+                <div class="box">
+                  <div class="image">
+                    <a href="contacts.html" style="text-decoration: none;">
+                    <img src="contact-us.png" alt="illustrator"></a>
+                  </div>
+                  <div class="title">Contact Us</div>
+                </div>
             </div>
-            <div class="modal-body">
-                <p><strong>Name:</strong> <span id="confirmName"></span></p>
-                <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
-                <p><strong>Phone:</strong> <span id="confirmPhone"></span></p>
-                <p><strong>Age:</strong> <span id="confirmAge"></span></p>
+          </section>
+          <br> &nbsp;
+          <br> &nbsp;
+      
+        <div class="hr">
+            <hr>
+        </div>
+        <br> &nbsp;
+          <br> &nbsp;
+        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(164, 218, 251);">ORGANIZING PARTNERS</h2>
+        <!-- Image container -->
+        <br> &nbsp;
+        <div class="image-container">
+            <div class="image-1">
+                <img src="6.jpeg" alt="">
             </div>
-            <div class="modal-footer">
-                <button type="button" onclick="submitForm()">Confirm</button>
-                <button type="button" onclick="closeModal()">Cancel</button>
+            <div class="image-2">
+                <img src="5.jpeg" alt="">
             </div>
+            <div class="image-3">
+                <img src="7.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+    <div class="grid-container">
+        <!-- First Item: Loader -->
+        <embed type="application/json" src="https://lottie.host/embed/55a3c58d-5f70-487c-bebb-955ea28a3548/zZ1eFtl9Fl.json" style="height: 200px; width: 900px; margin-left: -10%;" >
+          
+        <!-- Second Item: Placeholder Content -->
+        <div class="content-agenda">
+            <h2 style="color: rgb(174, 212, 245); font-size: 1.9rem;">What We Expect?</h2>
+            <p style="color: rgb(162, 204, 241); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Put on your thinking caps as you get ready for a creativity <br> problem-solving workout. This is a two-day event where people
+                with <br> bright ideas will come and present their ideas in five technology <br> segments such as AI, ML, Automation, and many others. 
+                Teams must <br>come up with their ideas with each domain having one finalist to compete<br> in the last round.
+                In the last round of the competition, 5 teams will be shortlisted<br> on the spot, and they will have only one hour to
+                come up with a different solution. <br> Don’t forget the attraction of attractive awards for the 1st, 2nd, and 3rd
+                places! <br> Do not let a day go by more so a week, a month, and a year whereby you are <br>not translating your ideas into
+                implementation.</p>
+        </div>
+    </div>
+</div>  
+   
+    &nbsp;
+    <br> &nbsp;
+    <br> &nbsp;
+    <br> &nbsp;
+    <br> &nbsp;
+
+    <div class="hrr">
+        <hr>
+    </div>
+    <br>
+    &nbsp;
+    <br>
+    &nbsp;
+
+    <button class="btn-3">ADMISSION FORM</button>
+    <br> &nbsp;
+    <br> &nbsp;
+    <div class="form-container">
+        <form action="https://api.web3forms.com/submit" method="POST">
+    
+            <input type="hidden" name="access_key" value="44cc7048-f88d-444e-b280-c717bcfc224e">
+            <label class="form-display">Name:</label>
+            <input type="text" name="name" required>
+            <br> &nbsp;
+            <label class="form-display">Phone Number:</label>
+            <input type="number" name="number" required> <!-- Changed type to 'tel' for phone numbers -->
+            <br> &nbsp;
+            <input type="hidden" name="redirect" value="https://ppgit.formaloo.co/ideathonregistration">
+            <button type="submit">Submit Details</button>
+    
+        </form>
+    </div>    
+    &nbsp;
+    <br> &nbsp;
+    <br> &nbsp;  
+        
+    <!-- Floating icon -->
+    <div class="floating-icon" onclick="togglePopup()">
+        <img src="chat.gif" alt="Chatbot Icon" width="50" height="50">
+        <div class="floating-text">May I help you?</div> <!-- Floating text above the floating icon -->
+    </div>
+
+    <!-- Popup container -->
+    <div class="popup-container" id="popup-container">
+        <!-- Popup content -->
+        <div class="popup-content">
+            <iframe src="ppg.html" width="100%" height="100%" style="border: none;"></iframe>
+            <!-- iframe for loading the HTML file -->
         </div>
     </div>
 
     <script>
-        function validateURL(url) {
-            var urlRegex = /^(https?:\/\/)?([a-zA-Z0-9.-]+(\.[a-zA-Z]{2,})+)(:[0-9]{1,5})?(\/.*)?$/;
-            return urlRegex.test(url.trim());
+        // Function to toggle the visibility of the popup
+        function togglePopup() {
+            var popupContainer = document.getElementById('popup-container');
+            popupContainer.style.display = (popupContainer.style.display === 'none' || popupContainer.style.display === '') ? 'flex' : 'none';
         }
 
-        function openConfirmationPopup(event) {
-            event.preventDefault(); // Prevent the form from submitting immediately
+        
+    function qs(selector, all = false) {
+      return all ? document.querySelectorAll(selector) : document.querySelector(selector);
+    }
 
-            var nameInput = document.getElementById("name").value.trim();
-            var emailInput = document.getElementById("email").value.trim();
-            var phoneInput = document.getElementById("phone").value.trim();
-            var dobInput = new Date(document.getElementById("dob").value);
-            var age = calculateAge(dobInput);
-            var socialLinksInput = document.getElementById("social-links").value.trim();
+    const sections = qs('.timeline-section', true);
+    const timeline = qs('.timeline');
+    const line = qs('.timeline-line');
 
-            // Validate the inputs
-            if (nameInput === "" || emailInput === "" || phoneInput === "" || isNaN(age) || !validateURL(socialLinksInput)) {
-                alert("Please fill in all the required fields and provide a valid URL.");
-                return false;
-            }
+    line.style.bottom = `calc(100% - 20px)`;
+    let prevScrollY = window.scrollY;
+    let up, down;
+    let full = false;
+    let set = 0;
+    const targetY = window.innerHeight * 0.8;
 
-            // Populate the modal with the user's inputs
-            document.getElementById("confirmName").textContent = nameInput;
-            document.getElementById("confirmEmail").textContent = emailInput;
-            document.getElementById("confirmPhone").textContent = phoneInput;
-            document.getElementById("confirmAge").textContent = age;
+    function scrollHandler(e) {
+      const { scrollY } = window;
 
-            // Display the modal
-            var modal = document.getElementById("confirmationModal");
-            modal.style.display = "block";
+      up = scrollY < prevScrollY;
+      down = !up;
 
-            return false; // Prevent the form from submitting for now
+      const timelineRect = timeline.getBoundingClientRect();
+      const lineRect = line.getBoundingClientRect();
+      const dist = targetY - timelineRect.top;
+
+      if (down && !full) {
+        set = Math.max(set, dist);
+        line.style.bottom = `calc(100% - ${set}px)`;
+      }
+
+      if (dist > timeline.offsetHeight + 50 && !full) {
+        full = true;
+        line.style.bottom = `-50px`;
+      }
+
+      sections.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top + item.offsetHeight / 5 < targetY) {
+          item.classList.add('show-timeline');
         }
+      });
 
-        function closeModal() {
-            var modal = document.getElementById("confirmationModal");
-            modal.style.display = "none";
-        }
+      prevScrollY = window.scrollY;
+    }
 
-        function submitForm() {
-            closeModal();
-            document.getElementById("myForm").submit(); // Submit the form after confirmation
-        }
+    scrollHandler();
+    line.style.display = 'block';
+    window.addEventListener('scroll', scrollHandler);
 
-        function calculateAge(dob) {
-            var today = new Date();
-            var age = today.getFullYear() - dob.getFullYear();
-            var monthDiff = today.getMonth() - dob.getMonth();
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
-                age--;
-            }
-            return age;
-        }
+    
 
-        // Close the modal if the user clicks outside of it
-        window.onclick = function (event) {
-            var modal = document.getElementById("confirmationModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
     </script>
 </body>
+
 </html>
