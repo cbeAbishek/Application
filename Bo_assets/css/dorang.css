@@ -259,7 +259,30 @@ hr {
   overflow: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1{
+ 
+    width: 800px;
+    margin: auto;
+    height: 90px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #04afb2dc, #0172fcd6); /* Gradient background */
+    box-shadow: 0 4px 6px rgb(32, 48, 174);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #01113b;
+    padding-top: 10px; 
+}
+#sty{
+  background-image: url("/sty.gif");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 3.2rem;
+}
+h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -7238,23 +7261,9 @@ a.close.disabled {
   }
 }
 
-.spinner-border {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  vertical-align: text-bottom;
-  border: 0.25em solid currentColor;
-  border-right-color: transparent;
-  border-radius: 50%;
-  -webkit-animation: spinner-border .75s linear infinite;
-          animation: spinner-border .75s linear infinite;
-}
 
-.spinner-border-sm {
-  width: 1rem;
-  height: 1rem;
-  border-width: 0.2em;
-}
+
+
 
 @-webkit-keyframes spinner-grow {
   0% {
@@ -11568,9 +11577,12 @@ a:hover {
 }
 
 .theme-selector .spinner i {
+  border: none;
   color: #fff;
 }
-
+.theme-selector .spinner a{
+  border: none;
+}
 .theme-selector .body {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -11581,6 +11593,7 @@ a:hover {
 
 .theme-selector .body a {
   display: inline-block;
+  border: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -11970,4 +11983,36 @@ body.light-theme .contact-section .footer .links a {
 
 body.dark-theme {
   background: #0f0c29;
+}
+
+@font-face {
+  font-family: 'TheFont';
+  src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2")
+    format('woff2'); }
+
+.breathe-animation {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 10vh;
+padding-top: 90px;
+padding-bottom: 50px;
+}
+
+.breathe-animation span {
+font-family: 'TheFont';
+font-size: clamp(1vw, 5vw, 10vh);
+color: white;
+text-align: center; 
+animation: letter-breathe 3s ease-in-out infinite;
+}
+
+@keyframes letter-breathe {
+from,
+to {
+font-variation-settings: 'wght' 100;
+}
+50% {
+font-variation-settings: 'wght' 900;
+}
 }
